@@ -83,6 +83,16 @@ namespace Sistema_Biblioteca.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancelar_pequeno {
+            get {
+                object obj = ResourceManager.GetObject("cancelar pequeno", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cliente_pequeno {
             get {
                 object obj = ResourceManager.GetObject("cliente pequeno", resourceCulture);
@@ -106,6 +116,16 @@ namespace Sistema_Biblioteca.Properties {
         internal static System.Drawing.Bitmap funcionario_pequeno {
             get {
                 object obj = ResourceManager.GetObject("funcionario pequeno", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gravar_pequeno {
+            get {
+                object obj = ResourceManager.GetObject("gravar pequeno", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

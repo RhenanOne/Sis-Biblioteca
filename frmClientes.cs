@@ -36,5 +36,62 @@ namespace Sistema_Biblioteca
         {
             this.Close();
         }
+
+        private void DesabilitaBotoes(object sender, EventArgs e)
+
+        {
+
+            tsbtnAlterarExcluir.Enabled = false;
+
+            tsbtnCadastrar.Enabled = false;
+
+            tsbtnConsultar.Enabled = false;
+
+            tsbtnVoltar.Enabled = false;
+
+            tsbtnSair.Enabled = false;
+
+        }
+
+        private void HabilitaBotoes(object sender, EventArgs e)
+
+        {
+
+            tsbtnAlterarExcluir.Enabled = true;
+
+            tsbtnCadastrar.Enabled = true;
+
+            tsbtnConsultar.Enabled = true;
+
+            tsbtnVoltar.Enabled = true;
+
+            tsbtnSair.Enabled = true;
+
+        }
+
+        private void tsbtnCadastrar_Click(object sender, EventArgs e)
+        {
+            frmCadastrarClientes objFrmCadastrarClientes = new frmCadastrarClientes();
+
+            //Informo a aplicação que o frmCadastrarClientes é o form filho do frmClientes
+            objFrmCadastrarClientes.MdiParent = this;
+
+            //Chamo o método que desativa os botões do formulário pai
+            this.DesabilitaBotoes(sender, e);
+
+            //Vinculo ao botão Cancelar Cadastro, do form filho, o método para ativar os botões do formulário pai, por meio de delegate
+            objFrmCadastrarClientes.tsbtnCancelar.Click += new EventHandler(this.HabilitaBotoes);
+
+            //Verifico se o form já está aberto. Se estiver impeço a abertura de um novo e exibo uma mensagem ao usuário
+            if (objFrmCadastrarClientes.Visible == false)
+            {
+                objFrmCadastrarClientes.Show();
+            }
+            else
+            {
+                MessageBox.Show("O formulário já está aberto com a gravação dos dados em andamento! Feche este formulário para abrir outro!",
+                "Mensagem do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
     }
 }
