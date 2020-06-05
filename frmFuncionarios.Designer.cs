@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.tsSuperior = new System.Windows.Forms.ToolStrip();
-            this.tsInferior = new System.Windows.Forms.ToolStrip();
-            this.tsbtnSair = new System.Windows.Forms.ToolStripButton();
             this.tsbtnAlterarExcluir = new System.Windows.Forms.ToolStripButton();
             this.tsbtnCadastrar = new System.Windows.Forms.ToolStripButton();
             this.tsbtnConsultar = new System.Windows.Forms.ToolStripButton();
             this.tsbtnVoltar = new System.Windows.Forms.ToolStripButton();
+            this.tsInferior = new System.Windows.Forms.ToolStrip();
+            this.tsbtnSair = new System.Windows.Forms.ToolStripButton();
             this.tsSuperior.SuspendLayout();
             this.tsInferior.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +51,46 @@
             this.tsSuperior.Size = new System.Drawing.Size(634, 55);
             this.tsSuperior.TabIndex = 1;
             this.tsSuperior.Text = "toolStrip1";
+            // 
+            // tsbtnAlterarExcluir
+            // 
+            this.tsbtnAlterarExcluir.Image = global::Sistema_Biblioteca.Properties.Resources.alterar_excluir_pequeno;
+            this.tsbtnAlterarExcluir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnAlterarExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnAlterarExcluir.Name = "tsbtnAlterarExcluir";
+            this.tsbtnAlterarExcluir.Size = new System.Drawing.Size(133, 52);
+            this.tsbtnAlterarExcluir.Text = "Alterar/Excluir";
+            this.tsbtnAlterarExcluir.Click += new System.EventHandler(this.tsbtnAlterarExcluir_Click);
+            // 
+            // tsbtnCadastrar
+            // 
+            this.tsbtnCadastrar.Image = global::Sistema_Biblioteca.Properties.Resources.cadastrar_pequeno;
+            this.tsbtnCadastrar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnCadastrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnCadastrar.Name = "tsbtnCadastrar";
+            this.tsbtnCadastrar.Size = new System.Drawing.Size(109, 52);
+            this.tsbtnCadastrar.Text = "Cadastrar";
+            this.tsbtnCadastrar.Click += new System.EventHandler(this.tsbtnCadastrar_Click);
+            // 
+            // tsbtnConsultar
+            // 
+            this.tsbtnConsultar.Image = global::Sistema_Biblioteca.Properties.Resources.consultar_pequeno;
+            this.tsbtnConsultar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnConsultar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnConsultar.Name = "tsbtnConsultar";
+            this.tsbtnConsultar.Size = new System.Drawing.Size(110, 52);
+            this.tsbtnConsultar.Text = "Consultar";
+            this.tsbtnConsultar.Click += new System.EventHandler(this.tsbtnConsultar_Click);
+            // 
+            // tsbtnVoltar
+            // 
+            this.tsbtnVoltar.Image = global::Sistema_Biblioteca.Properties.Resources.voltar_pequeno;
+            this.tsbtnVoltar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnVoltar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnVoltar.Name = "tsbtnVoltar";
+            this.tsbtnVoltar.Size = new System.Drawing.Size(89, 52);
+            this.tsbtnVoltar.Text = "Voltar";
+            this.tsbtnVoltar.Click += new System.EventHandler(this.tsbtnVoltar_Click);
             // 
             // tsInferior
             // 
@@ -73,43 +113,6 @@
             this.tsbtnSair.Text = "Sair";
             this.tsbtnSair.Click += new System.EventHandler(this.tsbtnSair_Click);
             // 
-            // tsbtnAlterarExcluir
-            // 
-            this.tsbtnAlterarExcluir.Image = global::Sistema_Biblioteca.Properties.Resources.alterar_excluir_pequeno;
-            this.tsbtnAlterarExcluir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbtnAlterarExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnAlterarExcluir.Name = "tsbtnAlterarExcluir";
-            this.tsbtnAlterarExcluir.Size = new System.Drawing.Size(134, 52);
-            this.tsbtnAlterarExcluir.Text = "Alterar/Excluir";
-            // 
-            // tsbtnCadastrar
-            // 
-            this.tsbtnCadastrar.Image = global::Sistema_Biblioteca.Properties.Resources.cadastrar_pequeno;
-            this.tsbtnCadastrar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbtnCadastrar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnCadastrar.Name = "tsbtnCadastrar";
-            this.tsbtnCadastrar.Size = new System.Drawing.Size(109, 52);
-            this.tsbtnCadastrar.Text = "Cadastrar";
-            // 
-            // tsbtnConsultar
-            // 
-            this.tsbtnConsultar.Image = global::Sistema_Biblioteca.Properties.Resources.consultar_pequeno;
-            this.tsbtnConsultar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbtnConsultar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnConsultar.Name = "tsbtnConsultar";
-            this.tsbtnConsultar.Size = new System.Drawing.Size(110, 52);
-            this.tsbtnConsultar.Text = "Consultar";
-            // 
-            // tsbtnVoltar
-            // 
-            this.tsbtnVoltar.Image = global::Sistema_Biblioteca.Properties.Resources.voltar_pequeno;
-            this.tsbtnVoltar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbtnVoltar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnVoltar.Name = "tsbtnVoltar";
-            this.tsbtnVoltar.Size = new System.Drawing.Size(89, 52);
-            this.tsbtnVoltar.Text = "Voltar";
-            this.tsbtnVoltar.Click += new System.EventHandler(this.tsbtnVoltar_Click);
-            // 
             // frmFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -123,6 +126,7 @@
             this.Name = "frmFuncionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Funcionarios";
+            this.Load += new System.EventHandler(this.frmFuncionarios_Load);
             this.tsSuperior.ResumeLayout(false);
             this.tsSuperior.PerformLayout();
             this.tsInferior.ResumeLayout(false);

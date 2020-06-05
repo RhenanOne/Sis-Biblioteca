@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.tsSuperior = new System.Windows.Forms.ToolStrip();
-            this.tsInferior = new System.Windows.Forms.ToolStrip();
             this.tsbtnAlterarExcluir = new System.Windows.Forms.ToolStripButton();
             this.tsbtnCadastrar = new System.Windows.Forms.ToolStripButton();
             this.tsbtnConsultar = new System.Windows.Forms.ToolStripButton();
             this.tsbtnVoltar = new System.Windows.Forms.ToolStripButton();
-            this.stbtnSair = new System.Windows.Forms.ToolStripButton();
+            this.tsInferior = new System.Windows.Forms.ToolStrip();
+            this.tsbtnSair = new System.Windows.Forms.ToolStripButton();
             this.tsSuperior.SuspendLayout();
             this.tsInferior.SuspendLayout();
             this.SuspendLayout();
@@ -52,25 +52,15 @@
             this.tsSuperior.TabIndex = 1;
             this.tsSuperior.Text = "toolStrip1";
             // 
-            // tsInferior
-            // 
-            this.tsInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tsInferior.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.stbtnSair});
-            this.tsInferior.Location = new System.Drawing.Point(0, 406);
-            this.tsInferior.Name = "tsInferior";
-            this.tsInferior.Size = new System.Drawing.Size(634, 55);
-            this.tsInferior.TabIndex = 2;
-            this.tsInferior.Text = "toolStrip2";
-            // 
             // tsbtnAlterarExcluir
             // 
             this.tsbtnAlterarExcluir.Image = global::Sistema_Biblioteca.Properties.Resources.alterar_excluir_pequeno;
             this.tsbtnAlterarExcluir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbtnAlterarExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnAlterarExcluir.Name = "tsbtnAlterarExcluir";
-            this.tsbtnAlterarExcluir.Size = new System.Drawing.Size(168, 52);
+            this.tsbtnAlterarExcluir.Size = new System.Drawing.Size(167, 52);
             this.tsbtnAlterarExcluir.Text = "Alterar/Excluir Livros";
+            this.tsbtnAlterarExcluir.Click += new System.EventHandler(this.tsbtnAlterarExcluir_Click);
             // 
             // tsbtnCadastrar
             // 
@@ -80,6 +70,7 @@
             this.tsbtnCadastrar.Name = "tsbtnCadastrar";
             this.tsbtnCadastrar.Size = new System.Drawing.Size(143, 52);
             this.tsbtnCadastrar.Text = "Cadastrar Livros";
+            this.tsbtnCadastrar.Click += new System.EventHandler(this.tsbtnCadastrar_Click);
             // 
             // tsbtnConsultar
             // 
@@ -89,6 +80,7 @@
             this.tsbtnConsultar.Name = "tsbtnConsultar";
             this.tsbtnConsultar.Size = new System.Drawing.Size(144, 52);
             this.tsbtnConsultar.Text = "Consultar Livros";
+            this.tsbtnConsultar.Click += new System.EventHandler(this.tsbtnConsultar_Click);
             // 
             // tsbtnVoltar
             // 
@@ -100,15 +92,26 @@
             this.tsbtnVoltar.Text = "Voltar";
             this.tsbtnVoltar.Click += new System.EventHandler(this.tsbtnVoltar_Click);
             // 
-            // stbtnSair
+            // tsInferior
             // 
-            this.stbtnSair.Image = global::Sistema_Biblioteca.Properties.Resources.sair_pequeno;
-            this.stbtnSair.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.stbtnSair.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.stbtnSair.Name = "stbtnSair";
-            this.stbtnSair.Size = new System.Drawing.Size(78, 52);
-            this.stbtnSair.Text = "Sair";
-            this.stbtnSair.Click += new System.EventHandler(this.stbtnSair_Click);
+            this.tsInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tsInferior.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbtnSair});
+            this.tsInferior.Location = new System.Drawing.Point(0, 406);
+            this.tsInferior.Name = "tsInferior";
+            this.tsInferior.Size = new System.Drawing.Size(634, 55);
+            this.tsInferior.TabIndex = 2;
+            this.tsInferior.Text = "toolStrip2";
+            // 
+            // tsbtnSair
+            // 
+            this.tsbtnSair.Image = global::Sistema_Biblioteca.Properties.Resources.sair_pequeno;
+            this.tsbtnSair.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnSair.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnSair.Name = "tsbtnSair";
+            this.tsbtnSair.Size = new System.Drawing.Size(78, 52);
+            this.tsbtnSair.Text = "Sair";
+            this.tsbtnSair.Click += new System.EventHandler(this.tsbtnSair_Click);
             // 
             // frmLivros
             // 
@@ -140,6 +143,6 @@
         private System.Windows.Forms.ToolStrip tsInferior;
         public System.Windows.Forms.ToolStripButton tsbtnConsultar;
         public System.Windows.Forms.ToolStripButton tsbtnVoltar;
-        public System.Windows.Forms.ToolStripButton stbtnSair;
+        public System.Windows.Forms.ToolStripButton tsbtnSair;
     }
 }

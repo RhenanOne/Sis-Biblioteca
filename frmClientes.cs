@@ -93,5 +93,89 @@ namespace Sistema_Biblioteca
                 "Mensagem do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void tsbtnConsultar_Click(object sender, EventArgs e)
+        {
+
+            {
+
+                frmConsultarClientes objFrmConsultarClientes = new frmConsultarClientes();
+
+                //Informo a aplicação que o frmConsultarClientes é o form filho do frmClientes
+
+                objFrmConsultarClientes.MdiParent = this;
+
+                //Chamo o método que desativa os botões do formulário pai
+
+                this.DesabilitaBotoes(sender, e);
+
+                //Vinculo ao botão Cancelar Cadastro, do form filho o método para ativar os botões do formulário pai, por meio de delegate
+
+                objFrmConsultarClientes.tsbtnVoltar.Click += new EventHandler(this.HabilitaBotoes);
+
+                //Verifico se o form já está aberto. Se estiver impeço a abertura de um novo e exibo uma mensagem ao usuário
+
+                if (objFrmConsultarClientes.Visible == false)
+
+                {
+
+                    objFrmConsultarClientes.Show();
+
+                }
+
+                else
+
+                {
+
+                    MessageBox.Show("O formulário já está aberto com a gravação dos dados em andamento! Feche este formulário para abrir outro!",
+
+                    "Mensagem do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                }
+
+            }
+
+        }
+
+        private void tsbtnAlterarExcluir_Click(object sender, EventArgs e)
+        {
+            {
+
+                frmAlterarExcluirClientes objFrmAlterarExcluirClientes = new frmAlterarExcluirClientes();
+
+                //Informo a aplicação que o frmAlterarExcluirClientes é o form filho do frmClientes
+
+                objFrmAlterarExcluirClientes.MdiParent = this;
+
+                //Chamo o método que desativa os botões do formulário pai
+
+                this.DesabilitaBotoes(sender, e);
+
+                //Vinculo ao botão Cancelar Cadastro, do form filho o método para ativar os botões do formulário pai, por meio de delegate
+
+                objFrmAlterarExcluirClientes.tsbtnVoltar.Click += new EventHandler(this.HabilitaBotoes);
+
+                //Verifico se o form já está aberto. Se estiver impeço a abertura de um novo e exibo uma mensagem ao usuário
+
+                if (objFrmAlterarExcluirClientes.Visible == false)
+
+                {
+
+                    objFrmAlterarExcluirClientes.Show();
+
+                }
+
+                else
+
+                {
+
+                    MessageBox.Show("O formulário já está aberto com a gravação dos dados em andamento! Feche este formulário para abrir outro!",
+
+                    "Mensagem do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                }
+
+            }
+        }
     }
 }

@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.tsSuperior = new System.Windows.Forms.ToolStrip();
+            this.tsInferior = new System.Windows.Forms.ToolStrip();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tsbtnSair = new System.Windows.Forms.ToolStripButton();
             this.tsbtnClientes = new System.Windows.Forms.ToolStripButton();
             this.tsbtnFuncionarios = new System.Windows.Forms.ToolStripButton();
             this.tsbtnLivros = new System.Windows.Forms.ToolStripButton();
-            this.tsInferior = new System.Windows.Forms.ToolStrip();
-            this.tsbtnSair = new System.Windows.Forms.ToolStripButton();
             this.tsSuperior.SuspendLayout();
             this.tsInferior.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tsSuperior
@@ -50,6 +52,38 @@
             this.tsSuperior.TabIndex = 0;
             this.tsSuperior.Text = "toolStrip1";
             this.tsSuperior.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.tsSuperior_ItemClicked);
+            // 
+            // tsInferior
+            // 
+            this.tsInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tsInferior.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbtnSair});
+            this.tsInferior.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.tsInferior.Location = new System.Drawing.Point(0, 406);
+            this.tsInferior.Name = "tsInferior";
+            this.tsInferior.Size = new System.Drawing.Size(634, 55);
+            this.tsInferior.TabIndex = 1;
+            this.tsInferior.Text = "toolStrip1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Sistema_Biblioteca.Properties.Resources.Capturar;
+            this.pictureBox1.Location = new System.Drawing.Point(111, 74);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(404, 293);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // tsbtnSair
+            // 
+            this.tsbtnSair.Image = global::Sistema_Biblioteca.Properties.Resources.sair_pequeno;
+            this.tsbtnSair.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsbtnSair.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnSair.Name = "tsbtnSair";
+            this.tsbtnSair.Size = new System.Drawing.Size(78, 52);
+            this.tsbtnSair.Text = "Sair";
+            this.tsbtnSair.Click += new System.EventHandler(this.tsbtnSair_Click);
             // 
             // tsbtnClientes
             // 
@@ -81,33 +115,12 @@
             this.tsbtnLivros.Text = "Livros";
             this.tsbtnLivros.Click += new System.EventHandler(this.tsbtnLivros_Click);
             // 
-            // tsInferior
-            // 
-            this.tsInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tsInferior.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsbtnSair});
-            this.tsInferior.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.tsInferior.Location = new System.Drawing.Point(0, 406);
-            this.tsInferior.Name = "tsInferior";
-            this.tsInferior.Size = new System.Drawing.Size(634, 55);
-            this.tsInferior.TabIndex = 1;
-            this.tsInferior.Text = "toolStrip1";
-            // 
-            // tsbtnSair
-            // 
-            this.tsbtnSair.Image = global::Sistema_Biblioteca.Properties.Resources.sair_pequeno;
-            this.tsbtnSair.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsbtnSair.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnSair.Name = "tsbtnSair";
-            this.tsbtnSair.Size = new System.Drawing.Size(78, 52);
-            this.tsbtnSair.Text = "Sair";
-            this.tsbtnSair.Click += new System.EventHandler(this.tsbtnSair_Click);
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 461);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tsInferior);
             this.Controls.Add(this.tsSuperior);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -120,6 +133,7 @@
             this.tsSuperior.PerformLayout();
             this.tsInferior.ResumeLayout(false);
             this.tsInferior.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,6 +147,7 @@
         private System.Windows.Forms.ToolStripButton tsbtnLivros;
         private System.Windows.Forms.ToolStrip tsInferior;
         private System.Windows.Forms.ToolStripButton tsbtnSair;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

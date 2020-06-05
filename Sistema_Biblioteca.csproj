@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Sistema_Biblioteca</RootNamespace>
     <AssemblyName>Sistema_Biblioteca</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,11 +47,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAlterarExcluirClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlterarExcluirClientes.Designer.cs">
+      <DependentUpon>frmAlterarExcluirClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlterarExcluirFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlterarExcluirFuncionario.Designer.cs">
+      <DependentUpon>frmAlterarExcluirFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAlterarExcluirLivros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlterarExcluirLivros.Designer.cs">
+      <DependentUpon>frmAlterarExcluirLivros.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCadastrarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCadastrarClientes.Designer.cs">
       <DependentUpon>frmCadastrarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastrarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastrarFuncionario.Designer.cs">
+      <DependentUpon>frmCadastrarFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadastrarLivros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadastrarLivros.Designer.cs">
+      <DependentUpon>frmCadastrarLivros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarClientes.Designer.cs">
+      <DependentUpon>frmConsultarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarFuncionario.Designer.cs">
+      <DependentUpon>frmConsultarFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultarLivros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarLivros.Designer.cs">
+      <DependentUpon>frmConsultarLivros.cs</DependentUpon>
     </Compile>
     <Compile Include="frmFuncionarios.cs">
       <SubType>Form</SubType>
@@ -78,8 +127,32 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAlterarExcluirClientes.resx">
+      <DependentUpon>frmAlterarExcluirClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlterarExcluirFuncionario.resx">
+      <DependentUpon>frmAlterarExcluirFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlterarExcluirLivros.resx">
+      <DependentUpon>frmAlterarExcluirLivros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCadastrarClientes.resx">
       <DependentUpon>frmCadastrarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastrarFuncionario.resx">
+      <DependentUpon>frmCadastrarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadastrarLivros.resx">
+      <DependentUpon>frmCadastrarLivros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarClientes.resx">
+      <DependentUpon>frmConsultarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarFuncionario.resx">
+      <DependentUpon>frmConsultarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarLivros.resx">
+      <DependentUpon>frmConsultarLivros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFuncionarios.resx">
       <DependentUpon>frmFuncionarios.cs</DependentUpon>
@@ -145,6 +218,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\gravar pequeno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Capturar.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

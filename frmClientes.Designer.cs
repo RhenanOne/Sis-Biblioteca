@@ -59,8 +59,9 @@
             this.tsbtnAlterarExcluir.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsbtnAlterarExcluir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnAlterarExcluir.Name = "tsbtnAlterarExcluir";
-            this.tsbtnAlterarExcluir.Size = new System.Drawing.Size(134, 52);
+            this.tsbtnAlterarExcluir.Size = new System.Drawing.Size(133, 52);
             this.tsbtnAlterarExcluir.Text = "Alterar/Excluir";
+            this.tsbtnAlterarExcluir.Click += new System.EventHandler(this.tsbtnAlterarExcluir_Click);
             // 
             // tsbtnCadastrar
             // 
@@ -80,6 +81,7 @@
             this.tsbtnConsultar.Name = "tsbtnConsultar";
             this.tsbtnConsultar.Size = new System.Drawing.Size(110, 52);
             this.tsbtnConsultar.Text = "Consultar";
+            this.tsbtnConsultar.Click += new System.EventHandler(this.tsbtnConsultar_Click);
             // 
             // tsbtnVoltar
             // 
